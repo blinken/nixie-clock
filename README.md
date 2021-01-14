@@ -8,7 +8,9 @@ A 42x20mm integrated breakout, boost converter and driver. This board connects
 to an IV-18 tube and provides 3V or 5V control via the [MAX6921AUI](https://datasheets.maximintegrated.com/en/ds/MAX6921-MAX6931.pdf)
 driver chip. The necessary voltage for the VFD tube is generated automatically from the supply voltage.
 
-This board lets you control the IV-18 tube as if it was a TTL-level device.
+This board lets you control the IV-18 tube as if it was a TTL-level device -
+all the high-voltage drive circuitry is contained in the vertical support
+riser. It runs happily off a USB 5V supply, though it will be fairly dim at 3.3V.
 
 Pinout:
  * GND
@@ -19,18 +21,23 @@ Pinout:
  * BLANK: Drive high to turn off the display. Connected to the MAX6921. *Blanking Input. High forces outputs OUT0 to OUT19 low, without altering the contents of the output latches. Low enables outputs OUT0 to OUT19 to follow the state of the output latches.*
  * DOUT: Data output, for chaining multiple tubes together. Connect to the DIN pin of the next module in line, and connect CLK, LOAD and BLANK together.
 
-<a href="mailto:blinken@gmail.com">Contact me</a> if you'd like a copy.
+Sample code for the ESP32 is [available here](https://github.com/blinken/nixie-clock/tree/main/examples/esp32).
+
+Please <a href="mailto:blinken@gmail.com">contact me</a> if you'd like a copy.
+
+<img src="https://raw.githubusercontent.com/blinken/nixie-clock/main/doc/driver-breadboard-tube.JPG" width=600>
+
+<img src="https://raw.githubusercontent.com/blinken/nixie-clock/main/doc/driver-breadboard-tube2.JPG" width=600>
 
 <img src="https://raw.githubusercontent.com/blinken/nixie-clock/main/doc/driver-breadboard.JPG" width=600>
 
 <img src="https://raw.githubusercontent.com/blinken/nixie-clock/main/doc/driver.JPG" width=600>
 
-
 ## IV-18 breakout
 This is a 41x27mm breakout board for the IV-18 nixie tube. It maps every pin on
 the tube to a 2x10 2.54mm header.
 
-[You can purchase the breakout on Tindie](https://www.tindie.com/products/blinkenlight/iv-18-ice-tube-clock-breakout-board/).
+[You can purchase the breakout on Tindie](https://www.tindie.com/products/blinkenlight/iv-18-ice-tube-clock-breakout-board/) or [Amazon UK](https://amzn.to/3oGgPQG).
 
 <img src="https://raw.githubusercontent.com/blinken/nixie-clock/main/doc/breakout-front.JPG" width=600>
 
